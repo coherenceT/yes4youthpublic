@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/slideshow.css"> 
+    <script src="js/navigation.js" defer></script> 
+    <link rel="stylesheet" href="css/navigation.css">
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a>
+                    <ul class="dropdown">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="press.html">Press</a></li>
+                    </ul>
+                </li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="stories.html">Success Stories</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Client Testimonials</h1>
+
+        <div class="slideshow-container">
+            <!-- Slides -->
+            <div class="mySlides fade">
+                <p>"The YES program changed my life! I learned invaluable skills that helped me secure a job." - Sarah M.</p>
+            </div>
+
+            <div class="mySlides fade">
+                <p>"I never thought I could start my own business until I joined YES. Now, I'm thriving!" - John D.</p>
+            </div>
+
+            <div class="mySlides fade">
+                <p>"Thanks to YES, I gained the confidence to pursue my dreams. I highly recommend it!" - Emily R.</p>
+            </div>
+
+            <div class="mySlides fade">
+                <p>"The mentorship I received was amazing! It helped me navigate my career path." - Michael T.</p>
+            </div>
+
+            <div class="mySlides fade">
+                <p>"YES connected me with opportunities I never knew existed. I am forever grateful." - Jessica S.</p>
+            </div>
+
+            <div class="mySlides fade">
+                <p>"The training I received through YES was top-notch. I feel prepared for the workforce!" - David L.</p>
+            </div>
+
+            <div class="mySlides fade">
+                <p>"YES helped me build a network that has been crucial in my career development." - Anna K.</p>
+            </div>
+
+            <div class="mySlides fade">
+                <p>"I learned so much about entrepreneurship and now run my own successful business!" - Tom W.</p>
+            </div>
+
+            <div class="mySlides fade">
+                <p>"The support from YES was incredible. I couldn't have done it without them." - Lisa G.</p>
+            </div>
+
+            <div class="mySlides fade">
+                <p>"YES provided me with the tools and confidence to make my career dreams a reality!" - Kevin B.</p>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <!-- Dots/bullets -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Yes4Youth. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://web.facebook.com/Yes4YouthZA/?_rdc=1&_rdr" target="_blank">
+                <img src="images/facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://x.com/Yes4YouthZA?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+                <img src="images/twitter-icon.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/yes4youth/" target="_blank">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+            const dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        // Automatic slideshow
+        setInterval(() => {
+            plusSlides(1);
+        }, 5000); // Change slide every 5 seconds
+    </script>
+</body>
+</html>

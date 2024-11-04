@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Yes4Youth</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="css/slideshow.css"> 
+    <link rel="stylesheet" href="css/navigation.css"> 
+    <script src="js/chatbot.js" defer></script>
+    <script src="js/slideshow.js" defer></script>
+    <script src="js/navigation.js" defer></script> 
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Yes4Youth Logo">
+        <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="news.html">News</a>
+    <ul class="dropdown">
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="press.html">Press</a></li>
+    </ul>
+</li>
+
+        </li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="stories.html">Success Stories</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+    </header>
+
+    <section class="hero">
+        <h1>Empowering the Youth of Tomorrow</h1>
+        <p>Join us in creating opportunities for young minds to grow and succeed.</p>
+        <h2 class="slogan">Shaping Futures, One Step at a Time</h2>
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="images/image1.jpg" alt="Image 1">
+                <div class="text">Empowering Communities</div>
+            </div>
+            <div class="mySlides">
+                <img src="images/image2.jpg" alt="Image 2">
+                <div class="text">Youth Programs in Action</div>
+            </div>
+            <div class="mySlides">
+                <img src="images/image3.jpg" alt="Image 3">
+                <div class="text">Inspiring Change</div>
+            </div>
+            <div class="mySlides">
+                <img src="images/image4.jpg" alt="Image 4">
+                <div class="text">Together We Can</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+    </section>
+
+    <section>
+        <h2>About Yes4Youth</h2>
+        <p>Yes4Youth is a dynamic non-profit organization committed to empowering youth across various communities. Our mission is to provide essential resources, support, and opportunities to young individuals, ensuring they have the tools they need to succeed in an increasingly competitive world.</p>
+        <p>Founded on the principles of inclusivity and growth, Yes4Youth aims to bridge the gap between potential and opportunity. We believe every young person deserves a chance to explore their passions, develop skills, and contribute positively to society.</p>
+    </section>
+
+    <section>
+        <h2>Our Vision</h2>
+        <p>At Yes4Youth, our vision is a world where every young person can access quality education, mentorship, and the resources necessary to achieve their dreams. We strive to create environments that nurture creativity, foster collaboration, and ignite a passion for lifelong learning.</p>
+    </section>
+
+    <section>
+        <h2>Programs Offered</h2>
+        <div class="info-box">
+            <h3>Leadership Development</h3>
+            <p>Programs designed to instill confidence and leadership skills.</p>
+        </div>
+        <div class="info-box">
+            <h3>Vocational Training</h3>
+            <p>Hands-on training that prepares youth for the job market.</p>
+        </div>
+        <div class="info-box">
+            <h3>Mentorship Opportunities</h3>
+            <p>Connecting young individuals with experienced mentors.</p>
+        </div>
+        <div class="info-box">
+            <h3>Community Engagement</h3>
+            <p>Initiatives that encourage active participation in community service.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Impact Stories</h2>
+        <div class="testimonial">
+            <p>"Yes4Youth has changed my life. I never thought I could pursue my passion for graphic design until I joined their program." – <strong>Amanda K.</strong></p>
+        </div>
+        <div class="testimonial">
+            <p>"The mentorship I received through Yes4Youth opened doors I never knew existed. I’m now on my way to starting my own business!" – <strong>Jason L.</strong></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Upcoming Events</h2>
+        <div class="event">
+            <h3>Youth Leadership Conference</h3>
+            <p>A two-day event filled with workshops, keynotes, and networking opportunities.</p>
+            <em>Date: June 15-16, 2024</em>
+        </div>
+        <div class="event">
+            <h3>Community Service Day</h3>
+            <p>A day dedicated to giving back to our community through various service projects.</p>
+            <em>Date: July 20, 2024</em>
+        </div>
+        <div class="event">
+            <h3>Fundraising Gala</h3>
+            <p>Join us for a night of inspiration and support at our annual fundraising gala.</p>
+            <em>Date: August 30, 2024</em>
+        </div>
+    </section>
+
+    <section>
+        <h2>Volunteer Spotlight</h2>
+        <div class="volunteer">
+            <h3>Sarah M.</h3>
+            <p>A dedicated volunteer who organizes workshops and activities for the youth.</p>
+        </div>
+        <div class="volunteer">
+            <h3>Michael B.</h3>
+            <p>An inspiring mentor who has guided numerous young individuals toward achieving their goals.</p>
+        </div>
+    </section>
+    <div id="chatbot">
+        <div id="chatbot-button">
+            <img src="images/robot.png" alt="Chatbot Icon"> 
+        </div>
+        <div id="chat-interface" class="hidden">
+            <div id="chat-header">
+                <h2>Yes4Youth Chatbot</h2>
+                <button id="close-chat" onclick="toggleChat()">X</button>
+            </div>
+            <div id="chat-content">
+                <div id="messages"></div>
+            </div>
+            <div id="chat-input">
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button id="sendBtn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Yes4Youth. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://web.facebook.com/Yes4YouthZA/?_rdc=1&_rdr" target="_blank">
+                <img src="images/facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://x.com/Yes4YouthZA?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+                <img src="images/twitter-icon.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/yes4youth/" target="_blank">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

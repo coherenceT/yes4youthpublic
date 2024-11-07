@@ -18,12 +18,10 @@
                 <li><a href="programs.html">Programs</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="news.html">News</a>
-            <ul class="dropdown">
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="press.html">Press</a></li>
-            </ul>
-        </li>
-        
+                    <ul class="dropdown">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="press.html">Press</a></li>
+                    </ul>
                 </li>
                 <li><a href="volunteer.html">Volunteer</a></li>
                 <li><a href="resources.html">Resources</a></li>
@@ -33,6 +31,7 @@
             </ul>
         </nav>
     </header>
+    
     <div class="hero">
         <h1>Stay Connected with Yes4Youth</h1>
         <p>Sign up for our newsletter to get the latest updates.</p>
@@ -48,14 +47,19 @@
         <input type="text" id="fromName" name="from_name" required>
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" required>Hi, Nivesh it will work it will only send to a gmail domain remove this then you can send a test message</textarea>
+        <textarea id="message" name="message" required>Hi, yes4youth </textarea>
         
         <button type="submit">Send Email</button>
     </form>
-
     <p id="statusMessage"></p>
 
-    <!-- Footer -->
+ 
+    <h2>Intrest</h2>
+    <div class="form-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe5Vp_4cs1IHpG2z1NkDmjanxt8WcPVjCjtAbJgCsGyUQHdEA/viewform?embedded=true" width="640" height="1273" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+
+   
     <footer>
         <p>&copy; 2024 Yes4Youth. All rights reserved.</p>
         <div class="social-media">
@@ -71,15 +75,14 @@
         </div>
     </footer>
 
-    <!-- EmailJS SDK -->
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         (function() {
-            emailjs.init("rW_OQFWCblujGNogE"); // Initialize EmailJS with User ID
+            emailjs.init("rW_OQFWCblujGNogE"); 
         })();
 
         document.getElementById('signupForm').onsubmit = function(event) {
-            event.preventDefault();  // Prevent default form submission
+            event.preventDefault(); 
 
             emailjs.sendForm("service_g9x8676", "template_3ez4fye", this)
                 .then(function(response) {
